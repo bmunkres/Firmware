@@ -29,9 +29,9 @@ done
 num_vehicles=${NUM_VEHICLES:=3}
 export PX4_SIM_MODEL=${VEHICLE_MODEL:=iris}
 
-if [ "$PX4_SIM_MODEL" != "iris" ] & [ "$PX4_SIM_MODEL" != "plane" ]
+if [ "$PX4_SIM_MODEL" != "iris" ] & [ "$PX4_SIM_MODEL" != "plane" ] & [ "$PX4_SIM_MODEL" != "standard_vtol" ]
 then
-	echo "Currently only iris and plane vehicle model is supported!"
+	echo "Currently only the following vehicle models are supported! [iris, plane, standard_vtol]"
 	exit 1
 fi
 
